@@ -5,59 +5,80 @@
     <title>Sign up page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes">
+    <style>
+        td {
+            padding: 5px;
+        }
+
+    </style>
 </head>
 
 <body>
     <h1>Sign up</h1>
-
-    <form action="a.html" method="post">
+    <form action="signup.html" method="post">
         <fieldset>
             <legend>필수 입력 정보</legend>
-            <p>
-                <label>
-                    email
-                    <br>
-                    <input type="email" name="email">
-                </label>
-            </p>
-            <!-- 다른 태그로 묶을 수 없을 때 e.g, table -->
-            <p>
-                <label for="password">password</label>
-                <br>
-                <input type="password" id="password">
-            </p>
-            <p>
-                password confirm
-                <br>
-                <input type="password" name="password">
-            </p>
+            <table>
+                <tr>
+                    <td>
+                        <label for="email">email</label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" name="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">password</label>
+                    </td>
+                    <td>
+                        <input type="password" id="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="passwordConfirm">password confirm</label>
+                    </td>
+                    <td>
+                        <input type="password" id="passwordConfirm" name="password">
+                    </td>
+                </tr>
+            </table>
         </fieldset>
         <br>
         <fieldset>
             <legend>선택 입력 정보</legend>
-            <p>
-                telephone number
-                <br>
-                <select name="phone1">
-                    <option value="010">010</option>
-                    <option value="02">02</option>
-                    <option value="031">031</option>
-                    <option value="070">070</option>
-                </select>
-                <input type="tel" name="phone2" size="6" maxlength="4">
-                <input type="tel" name="phone3" size="6" maxlength="4">
-            </p>
-            <p>
-                birth date
-                <br>
-                <input type="date" name="birthDate" value="1985-02-18">
-            </p>
+            <table>
+                <tr>
+                    <td>
+                        <label for="tel">telephone number</label>
+                    </td>
+                    <td>
+                        <select name="phone1">
+                            <option value="010">010</option>
+                            <option value="02">02</option>
+                            <option value="031">031</option>
+                            <option value="070">070</option>
+                        </select>
+                        <input type="tel" id="tel" name="phone2" size="6" maxlength="4">
+                        <input type="tel" name="phone3" size="6" maxlength="4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="birth">birth date</label>
+
+                    </td>
+                    <td>
+                        <input type="date" id="birth" name="birth" value="1985-02-18">
+                    </td>
+                </tr>
+            </table>
         </fieldset>
         <p>
             <button type="submit" name="submit">submit</button>
             <button type="reset">cancle</button>
         </p>
-
     </form>
 </body>
 

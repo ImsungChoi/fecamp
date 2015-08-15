@@ -2,23 +2,18 @@
 .front {
     color: green;
 }
-
 #end {
     font-weight: bold;
 }
-
 a:link {
     color: deepskyblue;
 }
-
 a:visited {
     color: darkgray;
 }
-
 a:hover {
     color: rgba(255, 0, 0, 0.5);
 }
-
 a:active {
     color: yellowgreen;
 }
