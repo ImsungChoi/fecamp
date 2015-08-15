@@ -7,27 +7,28 @@
 </head>
 
 <body>
-    <p>
-        <h1>Sign up</h1>
-    </p>
+    <h1>Sign up</h1>
 
     <form action="a.html" method="post">
         <fieldset>
             <legend>필수 입력 정보</legend>
             <p>
-                email
-                <br>
-                <input type="email" name="email"></input>
+                <label>
+                    email
+                    <br>
+                    <input type="email" name="email">
+                </label>
             </p>
+            <!-- 다른 태그로 묶을 수 없을 때 e.g, table -->
             <p>
-                password
+                <label for="password">password</label>
                 <br>
-                <input type="password"></input>
+                <input type="password" id="password">
             </p>
             <p>
                 password confirm
                 <br>
-                <input type="password" name="password"></input>
+                <input type="password" name="password">
             </p>
         </fieldset>
         <br>
@@ -43,12 +44,12 @@
                     <option value="070">070</option>
                 </select>
                 <input type="text" name="phone2" size="6" maxlength="4">
-                <input type="text" name="phone3" size="6" length="4">
+                <input type="text" name="phone3" size="6" maxlength="4">
             </p>
             <p>
                 birth date
                 <br>
-                <input type="date" name="birthDate" value="1985-02-18"></input>
+                <input type="text" name="birthDate" value="1985-02-18">
             </p>
         </fieldset>
         <p>
