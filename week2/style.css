@@ -1,21 +1,119 @@
 @charset "utf-8";
 div {
-/*
+    /*
     font-style: italic;
     font-weight: bold;
     font-size: 20px;
     font-family: '나눔고딕', nanumgothic, '맑은고딕', 'malgun gothic', '돋움', dotum, sans-serif;
     line-height: 1.5;
 */
-    font: normal 15px/20px '나눔고딕', nanumgothic, '맑은고딕', 'malgun gothic', '돋움', dotum, sans-serif;
+    /*    font: normal 15px/20px '나눔고딕', nanumgothic, '맑은고딕', 'malgun gothic', '돋움', dotum, sans-serif;*/
+}
+
+body {
+    margin: 0;
+    padding-top: 70px;
+}
+
+.gnb {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #000;
+    z-index: 10;
+}
+
+.wrap {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.wrap:before {
+    /*    content: ':before에 보여지는 내용입니다.';*/
+    /*    color: #00f;*/
+}
+
+.wrap:after {
+    clear: both;
+    display: block;
+    content: '';
+    /*    color: #f00;*/
+}
+
+.box1 {
+    float: left;
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    height: 300px;
+    /*    margin: 0 auto;*/
+    border: 1px solid black;
+    background-color: #f04829;
+    padding: 30px;
+    box-sizing: border-box;
+    /*    float: left;*/
+}
+
+.box2 {
+    float: right;
+    /*    clear: left;*/
+    position: relative;
+    z-index: 2;
+    width: 300px;
+    height: 300px;
+    /*    margin: 0 auto;*/
+    border: 50px solid black;
+    background-color: #f04829;
+    padding: 20px;
+    /*    margin-top: 20px;*/
+    box-sizing: border-box;
+    /*    float: left;*/
+}
+
+.layer1 {
+    position: fixed;
+    z-index: 4;
+    left: 30px;
+    top: 30px;
+    background-color: #fc0;
+    white-space: nowrap;
+/*    color: #fff;*/
+}
+
+.layer2 {
+    position: absolute;
+    z-index: 3;
+    right: 0px;
+    bottom: 0px;
+    background-color: #fc0;
+    white-space: nowrap;
+}
+
+.go-top,
+.goTop,
+.go_top {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: aqua;
+}
+
+div.box {
+    width: 300px;
+    height: 300px;
+    border: 50px solid black;
+    background-color: #f04829;
+    padding: 50px;
+    margin: 30px;
+    /*    float: left;*/
 }
 
 p {
-/*
-    text-align: justify;
-    font-size : 1.5em;
-*/
-    text-indent: 10px;
+    letter-spacing: 0;
+    word-spacing: 0;
+    /*    white-space: nowrap;*/
 }
 
 .justify {
@@ -23,16 +121,23 @@ p {
 }
 
 span {
-    text-decoration: overline;
+    border: 1px solid red;
 }
 
-strong {
+span.px10 {
+    font-size: 10px;
+    vertical-align: bottom;
 }
+
+span.px30 {
+    font-size: 30px;
+}
+
+strong {}
 
 .front {
     text-align: center;
     font-size: 1.5rem;
 }
 
-#end {
-}
+#end {}

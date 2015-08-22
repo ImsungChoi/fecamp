@@ -1,0 +1,64 @@
+body {
+    font-family: '나눔고딕', nanumgothic, sans-serif;
+    font-size: 14px;
+    /*    text-decoration: none;*/
+}
+
+.tab_menu {
+    /*    float: left;*/
+    padding-left: 0;
+    display: block;
+    height: 45px;
+    list-style: none;
+    /*    white-space: nowrap;*/
+    /*    width: 600px;*/
+    border-bottom: 2px solid #555;
+}
+
+.tab_menu:after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+li {
+    /*    width: 100%;*/
+    /*    background-color: white;*/
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    float: left;
+    /*    height: 45px;*/
+    /*    width: auto;*/
+    /*    text-align: center;*/
+}
+
+a {
+    color: #555;
+    display: block;
+    width: 118px;
+    font-weight: 500;
+    /*    height: 45px;*/
+    text-decoration: none;
+    line-height: 45px;
+    text-align: center;
+    /*    width: 100%;*/
+    /*    box-sizing: border-box;*/
+}
+
+.other_size {
+    width: 158px;
+}
+
+li:hover {
+    border-color: #555;
+}
+
+tab_menu li:hover a {
+    border-color: #555;
+}
+
+a:hover {
+    background: #555;
+    /*    border-color: #555;*/
+    color: #fff;
+}
