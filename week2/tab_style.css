@@ -190,7 +190,7 @@ body {
 }
 .tab_menu4 li:hover a {
     background-color: #fff;
-    border-bottom: none;
+    border: none;
     color: #515a67;
     font-weight: bold;
 }
