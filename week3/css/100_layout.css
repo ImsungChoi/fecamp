@@ -1,0 +1,34 @@
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.wrap {
+    height: 100%;
+}
+
+header {
+    height: 100px;
+    background: #789;
+}
+
+footer{
+    height: 50px;
+    background: #ddd;
+}
+
+.container {
+    min-height: 100%;
+    margin-top: -100px;
+    margin-bottom: -50px;
+}
+
+nav {
+
+/*    height: 100%;*/
+}
+
+.content {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}

@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #aaa;
+}
+
+header {
+    height: 100px;
+    background: #789;
+}
+
+.container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 0;
+    background-color: #999;
+}
+
+nav {
+    background-color: #ddd;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    border:  1px solid #000;
+/*    height: 100%;*/
+}
+
+.content {
+    position:absolute;
+    left:302px;
+    right:0;
+    top:0;
+    bottom:0;
+}
