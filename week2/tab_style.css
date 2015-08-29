@@ -5,6 +5,7 @@ body {
     padding: 50px;
 }
 
+
 /********************************.tab_menu1********************************/
 
 .tab_menu1 {
@@ -13,27 +14,30 @@ body {
     list-style-type: none;
     padding-left: 0;
 }
+
 .tab_menu1:after {
     clear: both;
     content: '';
     display: block;
 }
+
 .tab_menu1 li {
+    float: left;
     position: relative;
 }
+
 .tab_menu1 li a {
     border-right: 1px solid #6f6f6f;
     color: #fff;
     display: block;
-    float: left;
     font-size: 12px;
     line-height: 27px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px;
     text-align: center;
     text-decoration: none;
 }
-.tab_menu1 li .top {
+
+.tab_menu1 .top {
     background-color: #828282;
     border-left: solid #6f6f6f;
     border-width: 1px;
@@ -42,14 +46,17 @@ body {
     font-weight: bold;
     margin-right: -1px;
 }
+
 .tab_menu1 li:hover {
     border-color: #656565;
 }
+
 .tab_menu1 li:hover a {
     background-color: #656565;
     color: #fff;
     font-weight: bold;
 }
+
 
 /********************************.tab_menu2********************************/
 
@@ -58,17 +65,21 @@ body {
     list-style-type: none;
     padding-left: 0;
 }
+
 .tab_menu2:after {
     clear: both;
     content: '';
     display: block;
 }
+
 .tab_menu2 li {
     border: solid #ccc;
     border-width: 1px 1px 0;
     float: left;
+    margin-right: -1px;
     position: relative;
 }
+
 .tab_menu2 a {
     color: #555;
     display: block;
@@ -79,16 +90,20 @@ body {
     text-decoration: none;
     width: 118px;
 }
+
 .tab_menu2 li:hover {
     border-color: #555;
 }
+
 .tab_menu2 li:hover a {
     background-color: #555;
     color: #fff;
 }
+
 .tab_menu2 .other_size {
     width: 158px;
 }
+
 
 /********************************.tab_menu3********************************/
 
@@ -99,16 +114,19 @@ body {
     list-style-type: none;
     padding-left: 0;
 }
+
 .tab_menu3:after {
     clear: both;
     content: '';
     display: block;
 }
+
 .tab_menu3 li {
     border-right: 1px solid #dededf;
     float: left;
     position: relative;
 }
+
 .tab_menu3 a {
     color: #555;
     display: block;
@@ -119,46 +137,60 @@ body {
     text-decoration: none;
     width: 130px;
 }
+
 .tab_menu3 span {
     color: #666666;
     font-size: 11px;
     font-weight: 100;
     line-height: 38px;
 }
+
 .tab_menu3 li:hover {
     border-color: #dededf;
 }
+
 .tab_menu3 li:hover a {
     background-color: #0f2c53;
     color: #fff;
 }
+
 .tab_menu3 li:hover span {
     color: #f00;
     font-weight: bold;
 }
+
 
 /********************************.tab_menu4********************************/
 
 .tab_menu4 {
     background-color: #505a69;
     border-top: 2px solid #3d4756;
-    list-style-type: none;
     padding-left: 0;
     padding-right: 15px;
+    height: 45px;
+    position: relative;
 }
+
+.tab_menu4 ul {
+    list-style-type: none;
+}
+
 .tab_menu4:after {
     clear: both;
     content: '';
     display: block;
 }
+
 .tab_menu4 li {
     border-right: 1px solid #3d4756;
+    float: left;
     position: relative;
 }
+
 .tab_menu4 li a {
     color: #fff;
     display: block;
-    float: left;
+/*    float: left;*/
     font-size: 13px;
     font-weight: 500;
     line-height: 45px;
@@ -166,34 +198,46 @@ body {
     text-decoration: none;
     width: 125px;
 }
+
+.sns_menu {
+    display: block;
+    display: right;
+}
+
 .tab_menu4 li .other_size {
     width: 140px;
 }
+
 .tab_menu4 .image {
     border: none;
     float: right;
     width: 45px;
 }
+
 .tab_menu4 img {
     border: 0;
     padding-top: 5px;
     width: 35px;
 }
+
 .tab_menu4 span {
     font-size: 11px;
     font-weight: bold;
     line-height: 43px;
 }
+
 .tab_menu4 li:hover a {
     background-color: #fff;
     border: none;
     color: #515a67;
     font-weight: bold;
 }
+
 .tab_menu4 li:hover span {
     border: none;
     color: #515a67;
 }
+
 
 /********************************.tab_menu5********************************/
 
@@ -203,15 +247,18 @@ body {
     list-style-type: none;
     padding-left: 0;
 }
+
 .tab_menu5:after {
     clear: both;
     content: '';
     display: block;
 }
+
 .tab_menu5 li {
     float: left;
     position: relative;
 }
+
 .tab_menu5 a {
     color: #555;
     display: block;
@@ -222,14 +269,17 @@ body {
     text-decoration: none;
     width: 90px;
 }
+
 .tab_menu5 li:hover {
     border-color: #555;
 }
+
 .tab_menu5 li:hover a {
     background-color: #828282;
     color: #fff;
     z-index: 2;
 }
+
 .tab_menu5 .other_size {
     width: 120px;
 }
