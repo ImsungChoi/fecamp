@@ -23,6 +23,7 @@ h1 {
     background-color: #000;
     background-image: url(../img/mobile.png);
     background-repeat: no-repeat;
+    background-size: 400px 120px;
 }
 .weather1 {
     background-position: 0 0;
