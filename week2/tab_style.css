@@ -166,13 +166,17 @@ body {
     background-color: #505a69;
     border-top: 2px solid #3d4756;
     padding-left: 0;
-    padding-right: 15px;
+/*    padding-right: 15px;*/
     height: 45px;
+/*    display: inline-block;*/
     position: relative;
 }
 
 .tab_menu4 ul {
+    padding-left: 0;
+    margin: 0;
     list-style-type: none;
+    height: 45p;
 }
 
 .tab_menu4:after {
@@ -185,6 +189,7 @@ body {
     border-right: 1px solid #3d4756;
     float: left;
     position: relative;
+/*    margin-top: -15px;*/
 }
 
 .tab_menu4 li a {
@@ -201,7 +206,23 @@ body {
 
 .sns_menu {
     display: block;
-    display: right;
+    float: right;
+    margin-right: 15px;
+}
+
+.sns_menu li {
+    float: right;
+}
+
+.sns_menu a {
+    margin-top: 3px;
+    margin-bottom: 2px;
+    padding: 0;
+}
+
+.sns_menu a img {
+    padding: 0;
+    height: 40px;
 }
 
 .tab_menu4 li .other_size {
