@@ -1,0 +1,116 @@
+@charset "utf-8";
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+}
+.pc {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #000;
+    background-image: url(../img/pc.png);
+    background-repeat: no-repeat;
+}
+.mobile {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #000;
+    background-image: url(../img/mobile.png);
+    background-repeat: no-repeat;
+}
+.weather1 {
+    background-position: 0 0;
+}
+.weather2 {
+    background-position: -40px 0;
+}
+.weather3 {
+    background-position: -80px 0;
+}
+.weather4 {
+    background-position: -120px 0;
+}
+.weather5 {
+    background-position: -160px 0;
+}
+.weather6 {
+    background-position: -200px 0;
+}
+.weather7 {
+    background-position: -240px 0;
+}
+.weather8 {
+    background-position: -280px 0;
+}
+.weather9 {
+    background-position: -320px 0;
+}
+.weather10 {
+    background-position: -360px 0;
+}
+.weather11 {
+    background-position: 0 -40px;
+}
+.weather12 {
+    background-position: -40px -40px;
+}
+.weather13 {
+    background-position: -80px -40px;
+}
+.weather14 {
+    background-position: -120px -40px;
+}
+.weather15 {
+    background-position: -160px -40px;
+}
+.weather16 {
+    background-position: -200px -40px;
+}
+.weather17 {
+    background-position: -240px -40px;
+}
+.weather18 {
+    background-position: -280px -40px;
+}
+.weather19 {
+    background-position: -320px -40px;
+}
+.weather20 {
+    background-position: -360px -40px;
+}
+.weather21 {
+    background-position: 0 -80px;
+}
+.weather22 {
+    background-position: -40px -80px;
+}
+.weather23 {
+    background-position: -80px -80px;
+}
+.weather24 {
+    background-position: -120px -80px;
+}
+.weather25 {
+    background-position: -160px -80px;
+}
+.weather26 {
+    background-position: -200px -80px;
+}
+.weather27 {
+    background-position: -240px -80px;
+}
+.weather28 {
+    background-position: -280px -80px;
+}
+.weather29 {
+    background-position: -320px -80px;
+}
+.weather30 {
+    background-position: -360px -80px;
+}
