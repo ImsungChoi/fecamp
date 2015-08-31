@@ -5,14 +5,14 @@ body {
 a {
     text-decoration: none;
 }
-.product_img {
+.product_container {
     position: relative;
-    height: 800px;
+    height: 400px;
     overflow: hidden;
 }
 .image_responsive {
     width: 100%;
-    height: 700px;
+    height: 300px;
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
