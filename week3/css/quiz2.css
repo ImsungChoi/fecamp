@@ -5,33 +5,22 @@ body {
 a {
     text-decoration: none;
 }
-@media (max-width: 800px) {
-    .product_container {
-        position: relative;
-        height: 400px;
-        overflow: hidden;
-    }
-    .image_responsive {
-        width: 100%;
-        height: 300px;
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-size: cover;
-    }
+.container {
+    margin-bottom: 10px;
 }
-@media (min-width: 800px) {
-    .product_container {
-        position: relative;
-        height: 1000px;
-        overflow: hidden;
-    }
-    .image_responsive {
-        width: 100%;
-        height: 900px;
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-size: cover;
-    }
+.product_container {
+    display: block;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    width: 100%;
+}
+.image_responsive {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
 }
 .container_row {
     position: relative;
@@ -52,8 +41,10 @@ span {
 }
 .title {
     font-weight: bold;
+    font-size: 20px;
 }
 .ellipsis {
+    line-height: 30px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -76,5 +67,4 @@ span {
 .profile_img > img {
     height: 56px;
     width: 56px;
-    vertical-align: middle;
 }
