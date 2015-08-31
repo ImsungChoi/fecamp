@@ -6,7 +6,7 @@ a {
     text-decoration: none;
 }
 
-@media (max-width: 800px) and (orientation: portrait) {
+@media (max-width: 800px) {
     .product_container {
         position: relative;
         height: 400px;
