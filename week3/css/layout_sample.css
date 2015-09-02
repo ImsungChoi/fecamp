@@ -112,10 +112,12 @@ ul {
 
 nav {
     background-color: #fff;
+    display: none;
 }
 
 aside {
     background-color: #487;
+    display: none;
 }
 
 .layout1 {
@@ -220,4 +222,86 @@ footer {
     background-attachment: fixed;
     background-size: 50px 50px;
     height: 500px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.shopping_list {
+    padding: 0 5px;
+    margin: 0 -10px;
+/*    padding: 0 -5px;*/
+}
+
+.shopping_item {
+    /*
+    float: left;
+    width: 20%;
+*/
+}
+
+.shopping_item .box {
+    padding: 0 5px 10px;
+}
+
+.thumb {
+    height: 200px;
+    border: 1px solid #eee;
+    background-image: url(../../week3/img/room.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.description {
+    padding: 0 10px;
+    background: #eee;
+    line-height: 30px;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (min-width:600px) {
+    .shopping_item {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:700px) {
+    .shopping_item {
+        width: 33.333333%;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .shopping_item {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .shopping_item {
+        width: 20%;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .thumb {
+        height: 100px;
+    }
 }
