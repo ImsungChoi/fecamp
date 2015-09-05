@@ -32,7 +32,7 @@ header ul {
 .gnb {
     /*    display: block;*/
     margin: 0 auto;
-    width: 900px;
+    max-width: 900px;
 }
 
 .gnb:after {
@@ -48,11 +48,16 @@ ul {
 .gnb > li {
     float: left;
     position: relative;
-    width: 150px;
+    width: 16.666666%;
 }
 
 .gnb > li > a:hover {
     background-color: #000;
+    /*    z-index: 10;*/
+}
+
+.gnb > li:hover {
+    z-index: 1;
 }
 
 .gnb > li:hover .gnb_sub {
@@ -99,6 +104,7 @@ ul {
 .gnb_sub > li:hover a {
     color: #000;
     font-weight: bold;
+    /*    z-index: 10;*/
 }
 
 .wrap {
@@ -107,6 +113,8 @@ ul {
 }
 
 .content {
+    max-width: 900px;
+    margin: 0 auto;
     background-color: #fff;
 }
 
@@ -241,7 +249,7 @@ p {
 .shopping_list {
     padding: 0 5px;
     margin: 0 -10px;
-/*    padding: 0 -5px;*/
+    /*    padding: 0 -5px;*/
 }
 
 .shopping_item {
@@ -303,5 +311,17 @@ p {
 @media screen and (orientation: landscape) {
     .thumb {
         height: 100px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .gnb > li {
+        width: 33.3333%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .gnb > li {
+        width: 50%;
     }
 }
