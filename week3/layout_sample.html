@@ -4,14 +4,18 @@
     <title>Layout Sample</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/layout_sample.css">
-<!--    <link rel="stylesheet" href="../week4/css/list.css">-->
+    <!--    <link rel="stylesheet" href="../week4/css/list.css">-->
 </head>
 
 <body>
     <header>
         <h1><a href="#">서비스명</a></h1>
+
+        <a class="skip" href="#gnb">GNB로 바로가기</a>
+        <a class="skip" href="#shopping_list">상품 목록으로 바로가기</a>
+
         <div class="gnb_wrap">
-            <ul class="gnb">
+            <ul class="gnb" id="gnb" tabindex="0">
                 <li><a href="#">menu1</a>
                     <ul class="gnb_sub">
                         <li><a href="#" class="ellipsis">menu1-1menu1-1menu1-1menu1-1menu1-1menu1-1menu1-1menu1-1menu1-1</a></li>
@@ -73,15 +77,9 @@
                 <li><a href="#">공연/전시/체험</a></li>
             </ul>
         </nav>
-        <aside>aside
-            <br>aside
-            <br>aside
-            <br>aside
-            <br>aside
-            <br>
-        </aside>
+
         <div class="content">
-            <ul class="shopping_list">
+            <ul class="shopping_list" id="shopping_list" tabindex="0">
                 <li class="shopping_item">
                     <div class="box">
                         <div class="thumb"></div>
@@ -275,8 +273,20 @@
                     </div>
                 </li>
             </ul>
+            <br>
+            <div class="loading">
+                <div class="loading_animation"></div>
+            </div>
         </div>
     </div>
+    <aside>
+        <ul>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+        </ul>
+    </aside>
     <footer>푸터</footer>
     </div>
 </body>
