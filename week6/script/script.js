@@ -39,7 +39,7 @@ function 세제곱(input) {
 	return Math.pow(input, 3);
 }
 console.log('Problem 5');
-console.log('2의 세제곱 : ' + 세제곱(2)); 
+console.log('2의 세제곱 : ' + 세제곱(2));
 console.log('3의 세제곱 : ' + 세제곱(3)); 
 
 // 6. 날짜를 전달하면 연월일과 요일을 문자열로 반환하는 함수 "날짜"를 작성하세요. 이 함수는 다음과 같이 동작해야 합니다.
