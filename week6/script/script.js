@@ -47,7 +47,8 @@ console.log('3의 세제곱 : ' + 세제곱(3));
 // var today = new Date();
 // console.log( 날짜(today) ); // "2015년 9월 13일 (일)"
 function 날짜(date) {
-	return date.getFullYear() + '년 ' + (date.getMonth() + 1) + '월 ' + date.getDate() + '일 (' + '일월화수목금토'[date.getDay()] + ')';
+	//return date.getFullYear() + '년 ' + (date.getMonth() + 1) + '월 ' + date.getDate() + '일 (' + '일월화수목금토'[date.getDay()] + ')';
+	return `${date.getFullYear()}년 ${date.getMonth()+1}월 ${date.getDate()}일 (${'일월화수목금토'[date.getDay()]})`;
 }
 console.log('Problem 6');
 var today = new Date();
