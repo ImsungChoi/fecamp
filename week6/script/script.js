@@ -48,8 +48,70 @@ console.log('3의 세제곱 : ' + 세제곱(3));
 // console.log( 날짜(today) ); // "2015년 9월 13일 (일)"
 function 날짜(date) {
 	//return date.getFullYear() + '년 ' + (date.getMonth() + 1) + '월 ' + date.getDate() + '일 (' + '일월화수목금토'[date.getDay()] + ')';
-	return `${date.getFullYear()}년 ${date.getMonth()+1}월 ${date.getDate()}일 (${'일월화수목금토'[date.getDay()]})`;
+	return `${date.getFullYear() }년 ${date.getMonth() + 1}월 ${date.getDate() }일 (${'일월화수목금토'[date.getDay()]})`;
 }
 console.log('Problem 6');
 var today = new Date();
 console.log('오늘 날짜 : ' + 날짜(today));
+
+
+
+///////////////////////////////////////////////////
+function 자리수(num) {
+	if (-1 < num && num < 10) {
+		console.log('한 자리수입니다');
+	} else if (9 < num && num < 100) {
+		console.log('두 자리수입니다');
+	} else if (99 < num && num < 1000) {
+		console.log('세 자리수입니다');
+	} else {
+		console.log('1000이상의 수 입니다.');
+	}
+}
+
+function is123(num) {
+	if (num === 1) {
+		console.log('1');
+	} else if (num === 2) {
+		console.log('2');
+	} else if (num === 3) {
+		console.log('3');
+	} else {
+		console.log('Wrong');
+	}
+}
+
+function is123switch(num) {
+	switch (num) {
+		case 1:
+			console.log('1');
+			break;
+		case 2:
+			console.log('2');
+			break;
+		case 3:
+			console.log('3');
+			break;
+
+		default:
+			console.log('Wrong');
+			break;
+	}
+}
+
+function out() {
+	console.log('시작=', i);
+	for (var i = 0; i < 10; i++) {
+		console.log(i);
+	}
+	console.log('끝=', i);
+}
+
+function 구구단3단() {
+	for (var i = 2; i < 10; i++) {
+		if (i === 5) {
+			continue;
+		}
+		console.log(`3 x ${i} = ${i * 3}`);
+	}
+}
