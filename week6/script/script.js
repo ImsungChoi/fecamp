@@ -115,3 +115,57 @@ function 구구단3단() {
 		console.log(`3 x ${i} = ${i * 3}`);
 	}
 }
+
+var timerID = setTimeout(function () {
+	console.log('Hello')
+}, 1000);
+
+clearInterval(timerID);
+
+function fn(num) {
+	console.log(num);
+	if (num === 0) {
+		console.log('끝');
+		return;
+	}
+
+	setTimeout(function () {
+		fn(num - 1);
+	}, 1000);
+}
+
+function fn2(num) {
+	var timerID = setInterval(function () {
+		console.log(num);
+		num--;
+		if (num === 0) {
+			console.log('끝');
+			clearInterval(timerID);
+		}
+	}, 1000);
+}
+
+function sayName() {
+	console.log(this.name);
+}
+
+var peter = {
+	name: 'Peter Parker',
+	sayName: sayName
+};
+
+var bruce = {
+	name: 'Bruce Wayne',
+	sayName: sayName
+}
+
+var name = 'Hero';
+
+peter.sayName();
+bruce.sayName();
+sayName();
+
+function fn3() {
+	// "use strict";
+	nonDefinedVar = 10;
+}
