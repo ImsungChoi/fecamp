@@ -145,27 +145,68 @@ function fn2(num) {
 	}, 1000);
 }
 
-function sayName() {
+// function sayName() {
+// 	console.log(this.name);
+// }
+
+// var peter = {
+// 	name: 'Peter Parker',
+// 	sayName: sayName
+// };
+
+// var bruce = {
+// 	name: 'Bruce Wayne',
+// 	sayName: sayName
+// }
+
+// var name = 'Hero';
+
+// peter.sayName();
+// bruce.sayName();
+// sayName();
+
+function Hero(name){
+	this.name = name;
+}
+
+Hero.prototype.sayName = function() {
 	console.log(this.name);
 }
 
-var peter = {
-	name: 'Peter Parker',
-	sayName: sayName
-};
-
-var bruce = {
-	name: 'Bruce Wayne',
-	sayName: sayName
-}
-
-var name = 'Hero';
-
+var peter = new Hero('Peter Parker');
 peter.sayName();
-bruce.sayName();
-sayName();
 
-function fn3() {
-	// "use strict";
-	nonDefinedVar = 10;
+
+var today = new Date();
+// var weekday = today.요일();
+// console.log(weekday);
+
+Date.prototype.요일 = function() {
+	return '일월화수목금토'[this.getDay()];
 }
+
+var weekday = today.요일();
+console.log(weekday);
+console.log(new Date(2017,8,15).요일());
+
+String.prototype.ㅋ = function() {
+	return this + 'ㅋㅋㅋ';
+}
+
+String.prototype.repeat = function(n) {
+	var output = "";
+	while(n-- > 0) {output += this;}
+	return output;
+}
+
+console.log('반가워'.ㅋ());
+
+// window.addEventListener(
+// 	'click', function(event) {
+// 		console.log(event);
+// 	}	
+// );
+
+window.onbeforeunload = function() {
+	return '작성 중인 메시지가 있습니다';
+};
