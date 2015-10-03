@@ -4,7 +4,9 @@
 <head>
 	<title>Week8 Sample</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<script src="http://www.bitstorm.org/jquery/color-animation/jquery.animate-colors-min.js"></script>
 	<script>
 		jQuery(function($) {
 			$('li').on('click.my', function(event) {
@@ -14,12 +16,66 @@
 			
 			$('button')
 				.eq(0).on('click', function(event) {
-					$('#box').animate({left : '-=50px', opacity: '+=0.1'}, 200);
+					$('#box').animate({left : '-=50px', opacity: '+=0.1', backgroundColor: '#f00'}, 200);
 				})
 				.end()
-				.eq(1)
-				.on('click', function(event) {
-					$('#box').animate({left : '+=50px', opacity: '-=0.1'}, 200);
+				.eq(1).on('click', function(event) {
+					$('#box').animate({left : '+=50px', opacity: '-=0.1', backgroundColor: '#0f0'}, 200);
+				});
+			
+			$(document).on('keydown', function(event) {
+				//console.log(event.which);
+				if (event.which < 37 || 40 < event.which) 
+					return;
+				console.log(event.which);
+				var ani = {top: '+=0px', left: '+=0px', width: '+=0px', height: '+=0px'};
+				switch(event.which) {
+					case 37 : 
+						if(event.shiftKey) {
+							ani.width = '-=10px';
+						} else {
+							ani.left = '-=50px';
+						}
+						break;
+					case 38 :
+						if(event.shiftKey) {
+							ani.height = '+=10px';
+						} else {
+							ani.top = '-=50px';
+						}
+						break;
+					case 39 :
+						if(event.shiftKey) {
+							ani.width = '+=10px';
+						} else { 
+							ani.left = '+=50px';
+						}
+						break;
+					case 40 :
+						if(event.shiftKey) {
+							ani.height = '-=10px';
+						} else {
+							ani.top = '+=50px';
+						}
+						break;
+				}
+				$('#box').stop().animate(ani, 100);
+			});
+			
+			$('#list input').on('keyup', function(event) {
+				if (event.which === 13) {
+					event.preventDefault(); // 기본 동작 취소
+					var val = $(this).val();
+					if(!val) return;
+					$(this).parent().before(`<li> ${val} <i class="fa fa-times"></i></li>`);
+					$(this).val('');
+				}
+			});
+			
+			$('#list').on('click', 'i', function(event) {
+				$(this).closest('li').slideUp(function() {
+					$(this).remove();
+				});
 			});
 		});
 	</script>
@@ -29,8 +85,19 @@
 			background: yellow;
 			border: 2px solid black;
 			padding: 20px;
+			width: 50px;
+			height: 50px;
 			top: 100px;
 			left: 100px;
+		}
+		
+		li {
+			font-size: 14px;
+			padding: 2px;
+		}
+		
+		input {
+			font-size: 13px;
 		}
 	</style>
 </head>
@@ -38,9 +105,15 @@
 <body>
 	<button>왼쪽으로</button>
 	<button>오른쪽으로</button>
-	<div id="box">
+	<div id="box" hidden>
 		안녕하세요.
 	</div>
+	<ul id="list">
+		<li>첫 번째 할 일 <i class="fa fa-times"></i></li>
+		<li>
+			<input></input>
+		</li>
+	</ul>
 </body>
 
 </html>
