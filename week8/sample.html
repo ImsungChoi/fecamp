@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Week8 Sample</title>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<script>
+		jQuery(function($) {
+			$('li').on('click.my', function(event) {
+				var $em = $(this).find('em');
+				$em.text( $em.text() + '0' );
+			});
+			
+			$('button')
+				.eq(0).on('click', function(event) {
+					$('#box').animate({left : '-=50px', opacity: '+=0.1'}, 200);
+				})
+				.end()
+				.eq(1)
+				.on('click', function(event) {
+					$('#box').animate({left : '+=50px', opacity: '-=0.1'}, 200);
+			});
+		});
+	</script>
+	<style>
+		#box {
+			position: absolute;
+			background: yellow;
+			border: 2px solid black;
+			padding: 20px;
+			top: 100px;
+			left: 100px;
+		}
+	</style>
+</head>
+
+<body>
+	<button>왼쪽으로</button>
+	<button>오른쪽으로</button>
+	<div id="box">
+		안녕하세요.
+	</div>
+</body>
+
+</html>
