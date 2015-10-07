@@ -41,15 +41,15 @@
 				
 				event.preventDefault();
 				
-				$(document).on('mousemove.drag touchmove', function(event) {
+				$(document).on('mousemove.drag touchmove.drag', function(event) {
 					var dx = pageX(event) -startX, dy = pageY(event) - startY
 					var newTop = top + dy, newLeft = left + dx;
 					$box.css({top: newTop, left: newLeft});
 					// console.log(dx, dy);
 				});
 				
-				$(document).on('mouseup.drag touchend', function(event){
-					$(this).off('mousemove.drag mouseup.drag touchmove touchend');
+				$(document).on('mouseup.drag touchend.drag', function(event){
+					$(this).off('mousemove.drag mouseup.drag touchmove.drag touchend.drag');
 				});
 			});
 			
