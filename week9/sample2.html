@@ -2,8 +2,9 @@
 <html>
 
 <head>
-	<title>Week9 Sample2 드래그 앤 드랍</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Week9 Sample2 드래그 앤 드랍</title>
 	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
 	<script>
 		jQuery(function($) {
@@ -30,26 +31,43 @@
 			// 	$('#box').stop();
 			// });
 			
-			$('#box').on('mousedown', function(event){
+			$('#box').on('mousedown touchstart', function(event){
 				var top = parseInt($(this).css('top')), left = parseInt($(this).css('left'));
-				var startX = event.pageX, startY = event.pageY;
+				var startX = pageX(event), startY = pageY(event);
 				// console.log(top, left, event.pageX, event.pageY);
 				var $box = $(this);
 				
+				console.log(event.originalEvent.touches[0]);
+				
 				event.preventDefault();
 				
-				$(document).on('mousemove.drag', function(event) {
-					var dx = event.pageX -startX, dy = event.pageY - startY
+				$(document).on('mousemove.drag touchmove', function(event) {
+					var dx = pageX(event) -startX, dy = pageY(event) - startY
 					var newTop = top + dy, newLeft = left + dx;
 					$box.css({top: newTop, left: newLeft});
-					console.log(dx, dy);
+					// console.log(dx, dy);
 				});
 				
-				$(document).on('mouseup.drag', function(event){
-					$(this).off('mousemove.drag mouseup.drag');
+				$(document).on('mouseup.drag touchend', function(event){
+					$(this).off('mousemove.drag mouseup.drag touchmove touchend');
 				});
 			});
 			
+			function pageX(event) {
+				if(event.pageX) {
+					return event.pageX;
+				} else {
+					return event.originalEvent.touches[0].pageX;
+				}
+			}
+			
+			function pageY(event) {
+				if(event.pageY) {
+					return event.pageY;
+				} else {
+					return event.originalEvent.touches[0].pageY;
+				}
+			}
 			
 			// $('#box')
 			// 	.animate({
