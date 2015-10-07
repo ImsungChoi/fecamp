@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Week9 스크롤링 애니메이션</title>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<script>
+		jQuery(function($) {
+			$(window).on('scroll', function() {
+				var index = Math.floor($(this).scrollTop() / 50);
+				// console.log(index);
+				index = index % 8;
+				$('#runner')
+					.css('background-position', (-108*index) + 'px 0')
+					.css('left', $(this).scrollTop() / 20 + 'px');
+			});
+		});
+	</script>
+	<style>
+		#runner {
+			position: fixed;
+			width: 108px;
+			height: 140px;
+			background: url(img/runner.png) no-repeat;
+		}
+	</style>
+</head>
+
+<body>
+	<div style="height: 10000px">
+		<div id="runner">
+		</div>
+	</div>
+</body>
+
+</html>

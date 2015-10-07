@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Week9 Sample2 드래그 앤 드랍</title>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<script>
+		jQuery(function($) {
+			
+			// moveRight();
+			
+			function moveRight() {
+				return $('#box').animate({left : '+=300'}, moveDown);
+			}
+			
+			function moveDown() {
+				return $('#box').animate({top : '+=300'}, moveLeft);
+			}
+			
+			function moveLeft() {
+				return $('#box').animate({left : '-=300'}, moveTop);
+			}
+			
+			function moveTop() {
+				return $('#box').animate({top : '-=300'}, moveRight);
+			}
+		
+			// $('button').on('click', function(event) {
+			// 	$('#box').stop();
+			// });
+			
+			$('#box').on('mousedown', function(event){
+				var top = parseInt($(this).css('top')), left = parseInt($(this).css('left'));
+				var startX = event.pageX, startY = event.pageY;
+				// console.log(top, left, event.pageX, event.pageY);
+				var $box = $(this);
+				
+				event.preventDefault();
+				
+				$(document).on('mousemove.drag', function(event) {
+					var dx = event.pageX -startX, dy = event.pageY - startY
+					var newTop = top + dy, newLeft = left + dx;
+					$box.css({top: newTop, left: newLeft});
+					console.log(dx, dy);
+				});
+				
+				$(document).on('mouseup.drag', function(event){
+					$(this).off('mousemove.drag mouseup.drag');
+				});
+			});
+			
+			
+			// $('#box')
+			// 	.animate({
+			// 		left : '+=300'
+			// 	}, 2000)
+			// 	.delay(1000)
+			// 	.animate({
+			// 		top : '+=300'
+			// 	}, 2000);
+		});
+	</script>
+	<style>
+		#box {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			left: 0px;
+			top: 0px;
+			background: green;
+		}
+		
+		button {
+			position : absolute;
+			top : 200px;
+			left : 200px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<button>Stop</button>
+</body>
+
+</html>
